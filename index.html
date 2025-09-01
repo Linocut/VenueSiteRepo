@@ -241,9 +241,9 @@
       font-family: "Josefin Sans", sans-serif;
       font-size: 1.3rem;
       color: #57534CAB;
-      line-height: 1.7;
-      text-align: left;
-      padding-left: 2rem;
+      line-height: 1.3;
+      text-align: center;
+      margin: 0.3rem 0;
     }
 
     /* Rules section */
@@ -276,6 +276,10 @@
       align-items: center;
       gap: 2rem;
       margin: 2rem 0;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 1.5rem;
     }
 
     .menu-item.reverse {
@@ -293,14 +297,55 @@
 
     .menu-image img {
       width: 100%;
-      height: 200px;
+      height: 450px;
       object-fit: cover;
       border-radius: 15px;
       border: 2px solid #d7a456;
     }
 
     .menu-title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      margin-top: -4rem;
+      text-align: center;
+    }
+
+    /* Kebab section styles */
+    .kebab-section {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+    }
+
+    .kebab-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+
+    .kebab-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .kebab-image {
+      width: 100%;
       margin-bottom: 1rem;
+    }
+
+    .kebab-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 2px solid #d7a456;
+    }
+
+    .kebab-text {
+      width: 100%;
     }
 
     /* Menu and Staff sections */
@@ -392,14 +437,14 @@
   <section id="menu">
     <div>
       <h1>Menu</h1>
-      <p class="p-golden">Sea shore inspired cuisine.</p>
+      <p class="p-golden">SEA SHORE INSPIRED CUISINE</p>
          <div class="wave-divider"></div>
     </div>
-    <div>
+    <div style="margin-top: 2rem;">
       <!-- Menu Item with Image Layout -->
       <div class="menu-item">
         <div class="menu-text">
-          <p class="p-golden menu-title">Appetizers</p>
+          <p class="p-golden menu-title">APPETIZERS</p>
           <p class="p-muted-left">Ceviche ......................................3</p>
           <p class="p-muted-left">Crab Croquettes..................3</p>
           <p class="p-muted-left">Raw Oyster..............................3</p>
@@ -407,7 +452,82 @@
           <p class="p-muted-left">King Crab Cake...................3</p>
         </div>
         <div class="menu-image">
-          <img src="PerfectPortion-ShrimpCocktail.jpg" alt="Shrimp Cocktail">
+          <img src="shrimp-cocktail.jpg" alt="Shrimp Cocktail">
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 2rem;">
+      <!-- Menu Item with Image Layout -->
+      <div class="menu-item reverse">
+        <div class="menu-text">
+          <p class="p-golden menu-title">SOUPS AND SALADS</p>
+          <p class="p-muted-left">Clam Chowder............................3</p>
+          <p class="p-muted-left">Coconut Cod Chowder.......3</p>
+          <p class="p-muted-left">Sykon Salad................................3</p>
+          <p class="p-muted-left">Scallop Salad............................3</p>
+          <p class="p-muted-left">Pineapple Salad.....................3</p>
+        </div>
+        <div class="menu-image">
+          <img src="pineapple-salad.jpg" alt="Pineapple Salad">
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 2rem;">
+      <!-- Menu Item with Image Layout -->
+      <div class="menu-item">
+        <div class="menu-text">
+          <p class="p-golden menu-title">ENTRES</p>
+          <p class="p-muted-left">Boiled Lobster............................3</p>
+          <p class="p-muted-left">Creamy Salmon Pasta.........3</p>
+          <p class="p-muted-left">Salmon Meuniere......................3</p>
+          <p class="p-muted-left">Boiled Crayfish...........................3</p>
+          <p class="p-muted-left">Grilled Dodo................................3</p>
+        </div>
+        <div class="menu-image">
+          <img src="salmon-meuniere.jpg" alt="Salmon Meuniere">
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 2rem;">
+      <!-- Kebab Section with 3-column layout -->
+      <div class="kebab-section">
+        <p class="p-golden menu-title">KEBAB</p>
+        <div class="kebab-grid">
+          <div class="kebab-item">
+            <div class="kebab-image">
+              <img src="beef-kebab.png" alt="Meat Kebab">
+            </div>
+            <div class="kebab-text">
+              <p class="p-muted-left">Meat Kebab..............................4</p>
+            </div>
+          </div>
+          <div class="kebab-item">
+            <div class="kebab-image">
+              <img src="veggie-kebab.jpg" alt="Forest Kebab">
+            </div>
+            <div class="kebab-text">
+              <p class="p-muted-left">Forest Kebab............................4</p>
+            </div>
+          </div>
+          <div class="kebab-item">
+            <div class="kebab-image">
+              <img src="tuna-kebab.jpg" alt="Tuna Kebab">
+            </div>
+            <div class="kebab-text">
+              <p class="p-muted-left">Tuna Kebab..............................4</p>
+            </div>
+          </div>
+          <div class="kebab-item">
+            <div class="kebab-image">
+              <img src="chicken-kebab.jpg" alt="Island Kebab">
+            </div>
+            <div class="kebab-text">
+              <p class="p-muted-left">Island Kebab............................4</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
