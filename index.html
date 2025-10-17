@@ -318,14 +318,16 @@
     }
 
     .kebab-grid {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      justify-content: space-between;
       margin-top: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .kebab-item {
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -338,7 +340,7 @@
 
     .kebab-image img {
       width: 100%;
-      height: 300px;
+      height: 250px;
       object-fit: cover;
       border-radius: 15px;
       border: 2px solid #d7a456;
@@ -354,6 +356,111 @@
       font-size: 4.5rem;
       font-weight: 300;
       margin-bottom: 1.5rem;
+    }
+
+    /* Staff section styles */
+    .staff-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin: 2rem 0;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 1.5rem;
+    }
+
+    .staff-item.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .staff-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .staff-name {
+      padding: 0.8rem;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.8);
+      margin-bottom: -0.5rem;
+    }
+
+    .staff-name p {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .staff-role {
+      padding: 0.8rem;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.8);
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .staff-role p {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+      color: #e0b66b;
+      font-family: "Inter", sans-serif;
+    }
+
+    .staff-role::after {
+      content: "";
+      width: 50%;
+      height: 30px;
+      margin: 0.5rem auto 0 auto;
+      display: block;
+      background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3e%3cpath d='M0,10 Q15,0 30,10 T60,10 T90,10 T120,10 T150,10 T180,10 T210,10 T240,10 T270,10 T300,10' stroke='%23d7a456' stroke-width='2' fill='none' opacity='0.7'/%3e%3c/svg%3e") repeat-x;
+      background-size: 300px 20px;
+    }
+
+    .staff-description {
+      padding: 1.5rem;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.8);
+      flex-grow: 1;
+    }
+
+    .staff-description p {
+      margin: 0;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .staff-picture {
+      flex: 1;
+      max-width: 40%;
+    }
+
+    .staff-pic-placeholder {
+      width: 100%;
+      height: 400px;
+      border: 5px dotted #d7a456;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.8);
+      overflow: hidden;
+    }
+
+    .staff-pic-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .staff-pic-placeholder p {
+      margin: 0;
+      font-size: 2rem;
+      color: #333;
     }
 
     /* Section visibility */
@@ -445,11 +552,11 @@
       <div class="menu-item">
         <div class="menu-text">
           <p class="p-golden menu-title">APPETIZERS</p>
-          <p class="p-muted-left">Ceviche ......................................3</p>
-          <p class="p-muted-left">Crab Croquettes..................3</p>
-          <p class="p-muted-left">Raw Oyster..............................3</p>
-          <p class="p-muted-left">Shrimp Cocktail....................3</p>
-          <p class="p-muted-left">King Crab Cake...................3</p>
+          <p class="p-muted-left">Crab Croquettes..................6,000</p>
+          <p class="p-muted-left">Raw Oyster..............................6,000</p>
+          <p class="p-muted-left">King Crab Cake...................7,000</p>
+          <p class="p-muted-left">Ceviche ......................................8,000</p>
+          <p class="p-muted-left">Shrimp Cocktail....................9,000</p>
         </div>
         <div class="menu-image">
           <img src="shrimp-cocktail.jpg" alt="Shrimp Cocktail">
@@ -462,11 +569,11 @@
       <div class="menu-item reverse">
         <div class="menu-text">
           <p class="p-golden menu-title">SOUPS AND SALADS</p>
-          <p class="p-muted-left">Clam Chowder............................3</p>
-          <p class="p-muted-left">Coconut Cod Chowder.......3</p>
-          <p class="p-muted-left">Sykon Salad................................3</p>
-          <p class="p-muted-left">Scallop Salad............................3</p>
-          <p class="p-muted-left">Pineapple Salad.....................3</p>
+          <p class="p-muted-left">Salted Cod............................1,000</p>
+          <p class="p-muted-left">Coconut Cod Chowder.......3,000</p>
+          <p class="p-muted-left">Sykon Salad................................3,000</p>
+          <p class="p-muted-left">Pineapple Salad.....................3,000</p>
+          <p class="p-muted-left">Scallop Salad............................4,000</p>
         </div>
         <div class="menu-image">
           <img src="pineapple-salad.jpg" alt="Pineapple Salad">
@@ -479,11 +586,11 @@
       <div class="menu-item">
         <div class="menu-text">
           <p class="p-golden menu-title">ENTRES</p>
-          <p class="p-muted-left">Boiled Lobster............................3</p>
-          <p class="p-muted-left">Creamy Salmon Pasta.........3</p>
-          <p class="p-muted-left">Salmon Meuniere......................3</p>
-          <p class="p-muted-left">Boiled Crayfish...........................3</p>
-          <p class="p-muted-left">Grilled Dodo................................3</p>
+          <p class="p-muted-left">Boiled Crayfish...........................6,000</p>
+          <p class="p-muted-left">Grilled Dodo................................6,000</p>
+          <p class="p-muted-left">Salmon Meuniere......................9,000</p>
+          <p class="p-muted-left">Creamy Salmon Pasta.........10,000</p>
+          <p class="p-muted-left">Boiled Lobster............................12,000</p>
         </div>
         <div class="menu-image">
           <img src="salmon-meuniere.jpg" alt="Salmon Meuniere">
@@ -501,7 +608,7 @@
               <img src="beef-kebab.png" alt="Meat Kebab">
             </div>
             <div class="kebab-text">
-              <p class="p-muted-left">Meat Kebab..............................4</p>
+              <p class="p-muted-left">Meat Kebab..............................2,000</p>
             </div>
           </div>
           <div class="kebab-item">
@@ -509,7 +616,7 @@
               <img src="veggie-kebab.jpg" alt="Forest Kebab">
             </div>
             <div class="kebab-text">
-              <p class="p-muted-left">Forest Kebab............................4</p>
+              <p class="p-muted-left">Forest Kebab............................2,000</p>
             </div>
           </div>
           <div class="kebab-item">
@@ -517,7 +624,7 @@
               <img src="tuna-kebab.jpg" alt="Tuna Kebab">
             </div>
             <div class="kebab-text">
-              <p class="p-muted-left">Tuna Kebab..............................4</p>
+              <p class="p-muted-left">Tuna Kebab..............................2,000</p>
             </div>
           </div>
           <div class="kebab-item">
@@ -525,7 +632,7 @@
               <img src="chicken-kebab.jpg" alt="Island Kebab">
             </div>
             <div class="kebab-text">
-              <p class="p-muted-left">Island Kebab............................4</p>
+              <p class="p-muted-left">Island Kebab............................2,000</p>
             </div>
           </div>
         </div>
@@ -537,11 +644,11 @@
       <div class="menu-item reverse">
         <div class="menu-text">
           <p class="p-golden menu-title">DRINKS</p>
-          <p class="p-muted-left">Pineapple Juice........................3</p>
-          <p class="p-muted-left">Dragon Fruit Blend.................3</p>
-          <p class="p-muted-left">Lemonade.................................3</p>
-          <p class="p-muted-left">Frozen Spirits..........................3</p>
-          <p class="p-muted-left">Mors.........................................3</p>
+          <p class="p-muted-left">Mors.........................................2,000</p>
+          <p class="p-muted-left">Lemonade.................................2,000</p>
+          <p class="p-muted-left">Dragon Fruit Blend.................3,000</p>
+          <p class="p-muted-left">Pineapple Juice........................4,000</p>
+          <p class="p-muted-left">Frozen Spirits..........................5,000</p>
         </div>
         <div class="menu-image">
           <img src="dragonfruit-drink.jpg" alt="Dragon Fruit Drink">
@@ -554,11 +661,11 @@
       <div class="menu-item">
         <div class="menu-text">
           <p class="p-golden menu-title">DESSERTS</p>
-          <p class="p-muted-left">Honeyed Dragon Fruit..............3</p>
-          <p class="p-muted-left">Pixiberry Cheese Cake............3</p>
-          <p class="p-muted-left">Pineapple Ponzecake...............3</p>
-          <p class="p-muted-left">Pineapple Orange Jelly............3</p>
-          <p class="p-muted-left">Wild Banana Blend..................3</p>
+          <p class="p-muted-left">Honeyed Dragon Fruit..............3,000</p>
+          <p class="p-muted-left">Pixiberry Cheese Cake............3,000</p>
+          <p class="p-muted-left">Pineapple Ponzecake...............5,000</p>
+          <p class="p-muted-left">Pineapple Orange Jelly............6,000</p>
+          <p class="p-muted-left">Wild Banana Blend..................3,000</p>
         </div>
         <div class="menu-image">
           <img src="cheesecake.jpg" alt="Cheesecake">
@@ -583,6 +690,7 @@
         <p class="p-muted-left">4. If you dine and dash, Jill will kick your ass when you come back.</p>
         <p class="p-muted-left">5. You may sit outside on the property or to the shore, just let staff know.</p>
          <p class="p-muted-left">6. Dry yourself off after going to the beach to prevent slips.</p>
+           <p class="p-muted-left">7. Don't put too much stress on the support beam.</p>
        <div class="wave-divider"></div>
     <p class="p-golden">Staff Roleplaying preferences</p>
     <p class="p-muted-left">You may roleplay however you like. Staff has personal preferences such as using "quotes" to signify speaking and /em to make an emotion. Emotes are often used to show exaggerated or fun emotions, same with taking out or putting away weapons.</p>
@@ -593,7 +701,96 @@
   <section id="staff">
     <div>
       <h1>Staff</h1>
-      <p class="p-muted">[Staff list here]</p>
+      <p class="p-golden">MEET OUR TEAM</p>
+      <div class="wave-divider"></div>
+    </div>
+    
+    <!-- Staff Member 1 - Picture on Right -->
+    <div style="margin-top: 2rem;">
+      <div class="staff-item">
+        <div class="staff-info">
+          <div class="staff-name">
+            <p class="p-golden">JILL LALIATH</p>
+          </div>
+          <div class="staff-role">
+            <p>HEAD CHEF & SECURITY</p>
+          </div>
+          <div class="staff-description">
+            <p class="p-muted-left"> A reserved and calm person (unless pissed off by raval) who serves as the head chef, and security. She's responsible for creating all the furniture and decorations in Seaside Respite. She enjoys hard work, and all the challenges that come her way, and is always eager to finish what she starts.</p>
+          </div>
+        </div>
+        <div class="staff-picture">
+          <div class="staff-pic-placeholder">
+            <img src="salmon-meuniere.jpg" alt="Jillian Waters">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Staff Member 2 - Picture on Left -->
+    <div style="margin-top: 2rem;">
+      <div class="staff-item reverse">
+        <div class="staff-info">
+          <div class="staff-name">
+            <p class="p-golden">SIGEL LAMONT</p>
+          </div>
+          <div class="staff-role">
+            <p>WAITER & TWINK</p>
+          </div>
+          <div class="staff-description">
+            <p class="p-muted-left">A struggling antisocial who gets out of his comfort zone by serving food. He had started dreaming of having and helping operate his own restaurant after a while of living in Limsa Lominsa, and now he can with his friends at Seaside Respite. While he still has his anxious moments, he enjoys watching Raval’s antics unfold, and seeks to create a comfortable environment for all.</p>
+          </div>
+        </div>
+        <div class="staff-picture">
+          <div class="staff-pic-placeholder">
+            <img src="dragonfruit-drink.jpg" alt="Marina Tide">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Staff Member 3 - Picture on Right -->
+    <div style="margin-top: 2rem;">
+      <div class="staff-item">
+        <div class="staff-info">
+          <div class="staff-name">
+            <p class="p-golden">RAVAL ULA</p>
+          </div>
+          <div class="staff-role">
+            <p>OWNER & WAITER</p>
+          </div>
+          <div class="staff-description">
+            <p class="p-muted-left"> A chaotic and brainrot man who is mainly in it for the reactions and fun. He's responsible for giving people their food, designing the menu, and paying taxes. He may dislike boring conversations and suggest things to spice things up, but he has moments of self reflection. </p>
+          </div>
+        </div>
+        <div class="staff-picture">
+          <div class="staff-pic-placeholder">
+            <img src="salmon-meuniere.jpg" alt="Jillian Waters">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Staff Member 4 - Picture on Left -->
+    <div style="margin-top: 2rem;">
+      <div class="staff-item reverse">
+        <div class="staff-info">
+          <div class="staff-name">
+            <p class="p-golden">PIERRE FERNAUX</p>
+          </div>
+          <div class="staff-role">
+            <p>WAITER</p>
+          </div>
+          <div class="staff-description">
+            <p class="p-muted-left">Scatterbrained and perpetually lost, but he tries his best. He's one of the waiters and not much else. Will find or make anything entertaining to himself at least.</p>
+          </div>
+        </div>
+        <div class="staff-picture">
+          <div class="staff-pic-placeholder">
+            <img src="dragonfruit-drink.jpg" alt="Marina Tide">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </body>
